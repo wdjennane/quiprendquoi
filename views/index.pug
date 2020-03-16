@@ -1,0 +1,12 @@
+include ./partials/header.pug
+
+h2 Créer un événement
+form(method="post" action="/party")
+  div
+    label(for="name") Nom de l'événement
+    input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+
+    label(for="author") Auteur
+    input(name="author" id="author" required minlength="3" placeholder="Wilem")
+
+  button(type="submit") Créer
