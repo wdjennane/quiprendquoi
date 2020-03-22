@@ -1,0 +1,103 @@
+.party__container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #e1eec3, #f05053);
+  font-family: "Roboto";
+
+  h1 {
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .first_party {
+    height: 120px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid black;
+  }
+
+  .container__items {
+    display: flex;
+    justify-content: center;
+    width: 520px;
+    flex-wrap: wrap;
+
+    .items {
+      min-height: 120px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      background-color: #ffffff;
+      border: 1px solid black;
+
+      .item__button {
+        height: 30px;
+        width: 150px;
+        font-size: 15px;
+        background: #f05053;
+        border: 2px solid #f05053;
+        color: #fff;
+      }
+    }
+
+    .share__event__label {
+      font-size: 10px;
+    }
+  }
+
+  .add__event {
+    height: 250px;
+    width: 220px;
+    padding: 0 30px;
+    padding-top: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .input__container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      label {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      input {
+        height: 40px;
+        padding-left: 15px;
+        font-size: 13px;
+      }
+    }
+    .button_submit {
+      height: 30px;
+      width: 150px;
+      align-self: center;
+      font-size: 15px;
+      background: #f05053;
+      border: 2px solid #f05053;
+      color: #fff;
+    }
+  }
+}

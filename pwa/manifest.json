@@ -1,0 +1,10 @@
+{
+  "name": "Qui prends quoi ?",
+  "short_name": "quiprendsquoi",
+  "theme_color": "#221133",
+  "background_color": "#308088",
+  "display": "minimal-ui",
+  "Scope": "/",
+  "start_url": "/",
+  "splash_pages": null
+}

@@ -1,12 +1,19 @@
 include ./partials/header.pug
 
-h2 Créer un événement
-form(method="post" action="/party")
-  div
-    label(for="name") Nom de l'événement
-    input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+section.container
+  form( class="form_home" method="post" action="/party")
+    h2 Créer un événement
+    div.form__party
+      div.input__container
+        label(for="name") Nom de l'événement
+        input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+      div.input__container
+        label(for="author" required) Votre pseudo
+        input(name="author" id="author" required minlength="3" placeholder="John")
+      div.input__container
+        label(for="date") Date de l'événement
+        input(name="date" id="date" type="date")
+    button( class="button_submit" type="submit") Créer
 
-    label(for="author") Auteur
-    input(name="author" id="author" required minlength="3" placeholder="Wilem")
-
-  button(type="submit") Créer
+    script.
+        console.log('Hello world');

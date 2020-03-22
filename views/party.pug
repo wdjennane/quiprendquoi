@@ -1,5 +1,38 @@
 include ./partials/header.pug
-h2= party.name
-h3 Créé par #{party.author}
-label(for="url") Partagez l'événement
-input(id="url" value=`${url}`)
+script.
+  party = !{JSON.stringify(party)}
+
+
+section.party__container
+
+
+
+  div.container__items
+    div.first_party
+      h2= party.name
+      h3 Créé par #{party.author}
+
+    each item in party.items
+      ul.items
+        li
+          span= item.name
+          <br/>
+          span Créé par #{item.user}
+        form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
+          button(class="item__button" type="submit") Supprimer
+        input(id="url"
+        value=`${url}`
+        data-clipboard=`${url}`
+        data-share-url=`${url}`
+        data-share-title=`${party.name}`
+        data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
+  div
+    form( class="add__event" method="post" action=`/party/${party._id}/items`)
+      h4.title Ajouter un élément
+      div.input__container
+        label(for="name") Nom de l'élément
+        input(name="name" id="name" required minlength="3" placeholder="Ex: Bière").input
+      div.input__container
+        label(for="user") Utilisateur
+        input(name="user" id="user" required placeholder="Ex: Pépito").input
+      button( class="button_submit" type="submit" style="margin-top: 10px").button.is-primary Créer
